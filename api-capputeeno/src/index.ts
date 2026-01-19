@@ -1,4 +1,10 @@
-const { faker } = require('@faker-js/faker');
+import express from 'express';
+import jsonGraphqlExpress from 'json-graphql-server/node';
+import cors from "cors";
+
+const app = express();
+
+import { faker } from '@faker-js/faker';
 
 const TOTAL_PAGES = 5;
 
@@ -31,3 +37,21 @@ export const allProducts = new Array(TOTAL_PAGES).fill(1).reduce((acc) => {
 
   return [...acc, ...products]
 }, [])
+
+const data = {
+  products: allProducts
+}
+
+app.use(
+  cors({
+    origin: "https://capputeeno.lalunainsky.com",
+    methos: ["GET", "POST"]
+  })
+)
+
+app.use(
+  '/',
+  jsonGraphqlExpress(data)
+);
+
+export default app;
