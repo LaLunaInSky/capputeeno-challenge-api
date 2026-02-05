@@ -1,15 +1,32 @@
 {
-  "name": "express",
+  "name": "api-capputeeno",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/LaLunaInSky/capputeeno-challenge-api#readme",
+  "bugs": {
+    "url": "https://github.com/LaLunaInSky/capputeeno-challenge-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaLunaInSky/capputeeno-challenge-api.git"
+  },
+  "license": "MIT",
+  "author": "LaLunaInSky",
   "type": "module",
   "dependencies": {
     "@faker-js/faker": "^10.2.0",
-    "cors": "^2.8.5",
+    "@neondatabase/serverless": "^1.0.2",
+    "cors": "^2.8.6",
+    "drizzle-orm": "^0.45.1",
     "express": "5.2.1",
     "json-graphql-server": "^3.3.0"
   },
   "devDependencies": {
-    "@types/express": "5.0.6",
-    "@types/bun": "1.3.6",
+    "@types/bun": "1.3.8",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.1",
+    "drizzle-kit": "^0.31.8",
     "typescript": "5.9.3"
   }
 }
